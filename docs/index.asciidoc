@@ -1,0 +1,5 @@
+= Enduserbeat Docs
+
+Welcome to the Enduserbeat documentation.
+
+
