@@ -3,12 +3,12 @@ package beater
 import (
 	"fmt"
 	"time"
-
 	"github.com/elastic/beats/libbeat/beat"
 	"github.com/elastic/beats/libbeat/common"
 	"github.com/elastic/beats/libbeat/logp"
-
 	"github.com/Manjukb/enduserbeat/config"
+	"github.com/Manjukb/enduserbeat/modules/hardware"
+  "github.com/Manjukb/enduserbeat/modules/software"
 )
 
 type Enduserbeat struct {
@@ -16,6 +16,7 @@ type Enduserbeat struct {
 	config config.Config
 	client beat.Client
 }
+
 
 // Creates beater
 func New(b *beat.Beat, cfg *common.Config) (beat.Beater, error) {
@@ -33,7 +34,6 @@ func New(b *beat.Beat, cfg *common.Config) (beat.Beater, error) {
 
 func (bt *Enduserbeat) Run(b *beat.Beat) error {
 	logp.Info("enduserbeat is running! Hit CTRL-C to stop it.")
-
 	var err error
 	bt.client, err = b.Publisher.Connect()
 	if err != nil {
@@ -48,16 +48,8 @@ func (bt *Enduserbeat) Run(b *beat.Beat) error {
 			return nil
 		case <-ticker.C:
 		}
-
-		event := beat.Event{
-			Timestamp: time.Now(),
-			Fields: common.MapStr{
-				"type":    b.Info.Name,
-				"counter": counter,
-			},
-		}
-		bt.client.Publish(event)
-		logp.Info("Event sent")
+		  hardware.PostData(bt.client)
+		  software.PostData(bt.client)
 		counter++
 	}
 }

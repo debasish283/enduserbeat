@@ -3,9 +3,13 @@
 
 package config
 
-import "time"
+import (
+	"time"
+	"github.com/elastic/beats/libbeat/common"
+)
 
 type Config struct {
+	Modules []*common.Config `config:"modules"`
 	Period time.Duration `config:"period"`
 }
 
