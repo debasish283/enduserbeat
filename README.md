@@ -117,12 +117,15 @@ make package
 This will fetch and create all images required for the build process. The whole process to finish can take several minutes.
 
 
-## Fields Description
+## Fields Description (Hardware)
 
+| Fields | Description |
+| --- | --- |
+| timestamp | elastic timestamp |
+| FreeRam | available ram  memory |
 ```
---Hardware--
-  timestamp	                                elastic timestamp
-  FreeRam	       	                          available memory
+
+  FreeRam	       	        available ram  memory
   Fstype	       	                          file system type
   HddFree	       	                          HDD free space in bytes
   HddTotal	       	                        HDD total space in bytes
