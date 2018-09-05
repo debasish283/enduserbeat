@@ -115,3 +115,38 @@ make package
 ```
 
 This will fetch and create all images required for the build process. The whole process to finish can take several minutes.
+
+
+## Fields Description
+
+```
+--Hardware--
+  timestamp	                                elastic timestamp
+  FreeRam	       	                          available memory
+  Fstype	       	                          file system type
+  HddFree	       	                          HDD free space in bytes
+  HddTotal	       	                        HDD total space in bytes
+  HddUsed	       	                          HDD used space in bytes
+  HddUsedPercent	                          HDD used percentage
+  Hostname	       	                        Network host name of the machine
+  KernelVersion	                            Windows kernel version of OS
+  Model	       	                            CPU model
+  ModelName	       	                        CPU model name
+  OS	       	                              Operating system
+  Platform	       	                        Operating system Platform
+  Ram	       	                              RAM of the system
+  RamUsedPercent	                          RAM used percent in a particular time
+  Uptime	       	                          System up time
+  beat.hostname	       	                    Network host name of the machine
+  beat.name	       	                        name of the beat
+  beat.version	       	                    beat version
+  booTime	                                  time of beat start --need to check
+  host	                                    Network host name of the machine
+  lastPatchUpdateDate	       	              Last patch update date of operating system
+  manufacturer	       	                    manufacturer of the machine
+  modelname	       	                        model name of the machine
+  servicepack	       	                      service pack version
+  type	       	                            type of beat (software/Hardware)
+  username       	                          user under which beat is running
+
+```
