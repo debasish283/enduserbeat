@@ -123,16 +123,39 @@ This will fetch and create all images required for the build process. The whole 
 | --- | --- |
 | timestamp | elastic timestamp |
 | FreeRam | available ram  memory |
+| Fstype | file system type |
+| HddFree | Hard disc free space in bytes |
+| HddTotal |  Hard disc total space in bytes |
+| HddUsed |  Hard disc used space in bytes |
+| HddUsedPercent |  Hard disc used percentage |
+| Hostname |  host name of the machine |
+| KernelVersion |  Windows kernel version of OS |
+| Model |                   CPU model |
+| ModelName |               CPU model name |
+| OS |                      Operating system |
+| Platform |                Operating system Platform |
+| Ram |                     RAM of the system |
+| RamUsedPercent |          RAM used percent in a particular time |
+| Uptime |                  System up time |
+| booTime |                 time of beat start --need to check |
+| host |                    Network host name of the machine |
+| lastPatchUpdateDate |     Last patch update date of operating system |
+| manufacturer |            manufacturer of the machine |
+| modelname |               model name of the machine |
+| servicepack |             service pack version |
+| type |                    type of beat (software/Hardware) |
+| username |                user under which beat is running |
+
 ```
 
-  FreeRam	       	        available ram  memory
-  Fstype	       	                          file system type
-  HddFree	       	                          HDD free space in bytes
-  HddTotal	       	                        HDD total space in bytes
-  HddUsed	       	                          HDD used space in bytes
-  HddUsedPercent	                          HDD used percentage
-  Hostname	       	                        Network host name of the machine
-  KernelVersion	                            Windows kernel version of OS
+
+
+
+
+
+
+
+
   Model	       	                            CPU model
   ModelName	       	                        CPU model name
   OS	       	                              Operating system
